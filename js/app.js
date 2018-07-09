@@ -70,9 +70,8 @@ Enemy.prototype.update = function(dt) {
 //        player.y = player.yo;
 //        //collision = true;
 //    }
-//    
-    //FIX: IMPLEMENTAR A FUNÇÃO CHECKCOLLISIONS
     
+   
 };
 
 // Draw the enemy on the screen, required method for game
@@ -103,6 +102,23 @@ var Player = function()
     
     this.direction = 0;
 };
+
+//FIX: IMPLEMENTAR A FUNÇÃO CHECKCOLLISIONS DO ENGINE
+
+Player.prototype.checkCollisions = function() {
+    var enemyy = allEnemies.length;
+    for (var i = 0; i < enemyy; i++) {
+      if (Math.abs(this.x - allEnemies[i].x) < 60 && Math.abs(this.y - allEnemies[i].y) < 60) {
+            console.log(this);
+         //   this.reset();
+          player.x = player.xo;
+          player.y = player.yo;
+        }
+    }
+};
+
+
+
 
 Player.prototype.update = function(dt) {
   

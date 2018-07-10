@@ -111,8 +111,8 @@ Player.prototype.checkCollisions = function() {
       if (Math.abs(this.x - allEnemies[i].x) < 60 && Math.abs(this.y - allEnemies[i].y) < 60) {
             console.log(this);
          //   this.reset();
-          player.x = player.xo;
-          player.y = player.yo;
+          this.x = this.xo;
+          this.y = this.yo;
         }
     }
 };
